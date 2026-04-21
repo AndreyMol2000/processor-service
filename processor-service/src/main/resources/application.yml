@@ -1,0 +1,31 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: processor-service
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/students_db
+    username: postgres
+    password: postgres
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+clickhouse:
+  url: jdbc:clickhouse://localhost:8123/default
+  username: admin
+  password: admin
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
